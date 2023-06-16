@@ -6,11 +6,12 @@ for key in triangle.keys():
             triangle[key] = int(input(f"Введите длину стороны {key} треугольника в мм.: "))
             break
         except Exception as err:
+            err.__hash__()
             print("Вы ввели неверные данные, попробуйте ещё раз")
 
 a, b, c = triangle.values()
 
-if a + b < c or a + c < b or b + c < a:
+if a + b < c or a + c < b or b + c < a or 0 in triangle.values():
     print("Данные размеры не могут быть у треугольника")
 else:
     for key in triangle.keys():
