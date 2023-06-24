@@ -33,10 +33,11 @@ TEXT = """
 выезда на арену, подобно героям Гомера, после чего гладиатор продолжал бой пешим.
 """
 
-clear_text = TEXT.lower()
-for ch in ',.()«»':
-    if ch in clear_text:
-        clear_text = clear_text.replace(ch, "")
+# clear_text = TEXT.lower()
+# for ch in ',.()«»':
+#     if ch in clear_text:
+#         clear_text = clear_text.replace(ch, "")
+clear_text = ''.join([ch for ch in TEXT.lower() if ch.isalnum() or ch == ' '])
 
 words = set([word.strip() for word in clear_text.lower().split()])
 
