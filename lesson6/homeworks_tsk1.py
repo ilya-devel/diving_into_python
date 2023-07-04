@@ -15,4 +15,7 @@ def show_result_of_check_date(date: str):
 
 
 if __name__ == '__main__':
-    print(show_result_of_check_date(argv[1]))
+    if len(argv) > 1:
+        print(show_result_of_check_date(argv[1]))
+    else:
+        print("Не была передана дата для проверки")
