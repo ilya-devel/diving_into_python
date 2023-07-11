@@ -28,7 +28,7 @@ def some_function(file_name='tsk3_data.txt'):
         names.seek(0, 0)
         for _ in range(count):
             row1 = numbers.readline()
-            if row1 is None:
+            if row1 == '':
                 numbers.seek(0, 0)
                 row1 = numbers.readline()
             row2 = names.readline()
