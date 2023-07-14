@@ -11,6 +11,7 @@
 """
 import csv
 import json
+import os
 from random import randint
 from functools import wraps
 from pathlib import Path
@@ -23,7 +24,7 @@ FJSON = Path().cwd() / 'result.json'
 def send_three_values_from_file(func):
     @wraps(func)
     def wrapper(*args, **kwargs):
-        with open(FILE, 'r', encoding='UTF-*') as f:
+        with open(FILE, 'r', encoding='UTF-8') as f:
             reader = csv.DictReader(f, fieldnames=HEADERS, dialect='excel-tab', quoting=csv.QUOTE_NONNUMERIC)
             for row in reader:
                 func(**row)
@@ -70,4 +71,7 @@ def find_roots_quadratic_equation(A=1, B=1, C=1):
 
 
 if __name__ == '__main__':
+    if FILE.is_file():
+        os.remove(FILE)
+    create_csv_with_data()
     find_roots_quadratic_equation()

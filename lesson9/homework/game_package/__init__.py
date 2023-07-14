@@ -1,1 +1,1 @@
-__all__ = ['quiz_num']
+__all__ = ['quiz_num', 'riddle_game']
