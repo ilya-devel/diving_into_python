@@ -28,6 +28,12 @@ class Rectangle:
     def __str__(self):
         return f"Прямоугольник со сторонами {self.__width} X {self.__length}"
 
+    def get_width(self):
+        return self.__width
+
+    def get_length(self):
+        return self.__length
+
 
 if __name__ == '__main__':
     lst = [Rectangle(), Rectangle(1, 2), Rectangle(3), Rectangle(length=4), Rectangle(width=5)]
