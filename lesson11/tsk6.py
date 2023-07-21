@@ -8,6 +8,9 @@ from tsk5 import RectangleExtended
 
 
 class RectangleExtendedSecond(RectangleExtended):
+    """
+    Дополнительное расширение класса RectangleExtended, добавляющий возможность сравнения двух прямоугольников по площади
+    """
 
     def __eq__(self, o: object) -> bool:
         return self.get_area() == o.get_area()
@@ -35,3 +38,5 @@ if __name__ == '__main__':
     print(RectangleExtendedSecond() <= RectangleExtendedSecond())
     print(RectangleExtendedSecond() > RectangleExtendedSecond())
     print(RectangleExtendedSecond() < RectangleExtendedSecond())
+    help(RectangleExtendedSecond)
+    print(RectangleExtendedSecond())

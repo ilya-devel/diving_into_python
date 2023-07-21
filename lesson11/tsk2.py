@@ -21,15 +21,27 @@ class Archive:
         """
         self.row = row
         self.num = num
-        self.add_in_lst(self)
+        self.__add_in_lst(self)
 
     @classmethod
-    def add_in_lst(cls, new_obj):
+    def __add_in_lst(cls, new_obj):
+        """
+        Метод класса, который добавляет объект в список объектов класса класса
+        :param new_obj:
+        :return:
+        """
         cls._LST_ARCHIVES.append(new_obj)
 
     @classmethod
     def get_lst_archives(cls):
+        """
+        Возвращает список созданных экземпляров класса
+        :return:
+        """
         return cls._LST_ARCHIVES
+
+    def __str__(self):
+        return f'\tЧисло: {self.num}\n\tСтрока: {self.row}'
 
 
 if __name__ == '__main__':
@@ -45,3 +57,4 @@ if __name__ == '__main__':
     print("Обращение к списку от имени экземпляра класса")
     for obj in tmp.get_lst_archives():
         print(obj)
+    help(Archive)
