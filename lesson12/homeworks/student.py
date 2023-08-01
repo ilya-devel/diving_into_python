@@ -13,7 +13,7 @@ from pprint import pprint
 from pathlib import Path
 from random import randint
 
-from descriptors import CheckName, GetListSubjects, Range
+from lesson12.homeworks.descriptors import CheckName, GetListSubjects, Range
 
 LST_SUBJECTS = Path.cwd() / 'subjects.csv'
 

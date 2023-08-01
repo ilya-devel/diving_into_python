@@ -55,12 +55,13 @@ class GetListSubjects:
 
     @staticmethod
     def validate(value):
+        if value is None:
+            raise ValueError(f"Не указан путь к файлу со списком предметов")
         if not Path(value).is_file():
             raise FileNotFoundError(f"Файл {value} не доступен или отсутствует")
         if not str(value).endswith('.csv'):
             raise ValueError(f"Списком предметов должен быть в файле csv")
-        if value is None:
-            raise ValueError(f"Не указан путь к файлу со списком предметов")
+
 
     @staticmethod
     def get_subjects(path_to_file) -> dict:
