@@ -1,0 +1,21 @@
+2023-08-03 22:39:30,729 INFO wrapper: args = (1, 5, 's', 123)
+kwargs = {'key': 123, 'som': 'less'}
+
+2023-08-03 22:40:26,921 INFO wrapper: args = (1, 5, 's', 123)
+kwargs = {'key': 123, 'som': 'less'}
+
+2023-08-03 22:43:00,729 INFO wrapper: args = (1, 5, 's', 123)
+kwargs = {'key': 123, 'som': 'less'}
+
+2023-08-04 11:07:00,021 INFO wrapper: args = (1, 5, 's', 123)
+kwargs = {'key': 123, 'som': 'less'}
+
+2023-08-04 11:09:09,652 INFO wrapper: some_func: args = (1, 5, 's', 123)
+kwargs = {'key': 123, 'som': 'less'}
+
+2023-08-04 11:15:34,818 INFO tsk2: some_func: args = (1, 5, 's', 123)
+kwargs = {'key': 123, 'som': 'less'}
+
+2023-08-04 11:21:26,576 INFO: some_func: args = (1, 5, 's', 123)
+kwargs = {'key': 123, 'som': 'less'}
+
